@@ -4,6 +4,15 @@ from tkinter import messagebox as mb
 import os
 
 
+#File Overview ---------
+""" 
+This module is for the implementation of a call log input to be eventually written to file 
+@ the end of the week. This is part of the larger project program to help increase my time
+management in sales. 
+
+This is to help fill gaps in shortcomings for my workflow that I see missing in
+programs I have come across.
+"""
 
     
 
@@ -197,7 +206,8 @@ class CallLogWindow:
     #----------------------------------------------------------------------------------------------
     def create_labels(self, w):
         """
-
+        To aid in cleanup of the __init__ function. Cleaner and easier to read code is the goal.
+        Create Label widget 
         """
         
         pass
@@ -205,7 +215,8 @@ class CallLogWindow:
     #----------------------------------------------------------------------------------------------
     def create_entries(self, w):
         """
-
+        To aid in cleanup of the __init__ function. Cleaner and easier to read code is the goal.
+        Create Entry widget 
         """
         
         pass
@@ -213,7 +224,8 @@ class CallLogWindow:
     #----------------------------------------------------------------------------------------------
     def create_labframe(self, w):
         """
-
+        To aid in cleanup of the __init__ function. Cleaner and easier to read code is the goal.
+        Create LabelFrame widget 
         """
         
         pass
