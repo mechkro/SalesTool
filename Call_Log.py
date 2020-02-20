@@ -838,27 +838,37 @@ class CallLogWindow:
     
     #----------------------------------------------------------------------------------------------
     def create_labels(self, w):
-        """ """
+        """
+
+        """
+        
         pass
     
     #----------------------------------------------------------------------------------------------
     def create_entries(self, w):
-        """ """
+        """
+
+        """
+        
         pass
     
     #----------------------------------------------------------------------------------------------
     def create_labframe(self, w):
-        """ """
+        """
+
+        """
+        
         pass
 
 
-    #Functions for GUI Functionality -------------------------------------------------------------------------------------------
+    #Functions for GUI Functionality --------------------------------------------------------------
     ##################################################################
     def pull_entry_data(self):
         """
         Func - called by submit button. Pull all the data from the widgets and send to perspective day of the week storage 
         and viewing  on left side of screen widgets
         """
+        
         sbox = self.spinbox.get()
         comp_E = self.comp_ent.get()
         cont_E = self.cont_ent.get()
@@ -869,13 +879,37 @@ class CallLogWindow:
         pulled_data_array = (sbox, comp_E, cont_E, med_E, desc_T, fwd_T)
         for i in pulled_data_array:
             print(i)
-        
+
+        self.add_entry_data_to_field(*pulled_data_array)
         self.clear_entry_widgets()
+
+
+    #---------------------------------------------------------------------
+    def add_entry_data_to_field(self, *args):
+        """
+        Func - to take pulled data from entry fields and input to appropriate
+        """
+        
+        fields = {'MONDAY': self.mon_lbox,
+                  'TUESDAY': self.tue_lbox,
+                  'WED': self.wed_lbox,
+                  'THURSDAY': self.th_lbox,
+                  'FRIDAY':self.f_lbox}
+
+        fields[args[0]].insert(tk.END, '{} Entry:'.format(args[0]))
+        for i in args[1::]:
+            j = str(i).strip('\n')
+            fields[args[0]].insert(tk.END, j)
+
+        return
         
         
     #------------------------------------------------------------------------------------------------    
     def clear_entry_widgets(self):
-        """ """
+        """
+
+        """
+        
         self.comp_ent.delete(0, tk.END)
         self.cont_ent.delete(0, tk.END)
         self.med_ent.delete(0, tk.END)
@@ -905,7 +939,8 @@ class CallLogWindow:
     def bind_clicking_widge(self, widge):
         """ 
         widge is given bind method to call resizing function when it is clicked
-        """        
+        """
+        
         widge.bind('<Button-1>', self.widge_enlarge_shrink)
         return
     
@@ -981,6 +1016,7 @@ class CallLogWindow:
         """ 
         Source: https://automatetheboringstuff.com/chapter8/
         """
+        
         self.parent.iconify()
         
         self.writefile_window = tk.Toplevel()
@@ -1003,6 +1039,7 @@ class CallLogWindow:
         Destroy the write file window and bring back to view the parent window so user 
         can continue with workflow
         """
+        
         self.writefile_window.destroy()
         self.parent.deiconify()
         
