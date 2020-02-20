@@ -76,11 +76,11 @@ class CallLogWindow:
        #Label Creation
        # ----------------------------------------------------------------------------------------------------------
         self.lab_accounts = tk.Label(self.display_frame, text = 'Accounts',  bg = BG, fg = FG, 
-                              font = ('terminal', 20, 'bold'))
+                              font = ('Verdana', 20, 'bold'))
         self.lab_accounts.grid(row = 0, column = 0 , padx = 5, pady = 5, sticky = tk.EW)
         
         self.lab_selection= tk.Label(self.selection_frame, text = 'Selection',  bg = BG, fg = FG,
-                               font = ('terminal', 20, 'bold'))        
+                               font = ('Verdana', 20, 'bold'))        
         self.lab_selection.grid(row = 0, column = 0 , columnspan = 2,  padx = 5, pady = 5, sticky = tk.EW) 
         
         
@@ -126,6 +126,7 @@ class CallLogWindow:
         for i in self.unitholdr:
             
             self.bind_enter_leave(i[1],i[0])
+            
             if i[0] == self.selection_frame:
                 pass
             
@@ -142,34 +143,35 @@ class CallLogWindow:
         
         #Spinbox to assign and send data to correct field for viewing
         self.choices = ('MONDAY', 'TUESDAY', 'WED', 'THURSDAY', 'FRIDAY')
-        self.spinbox = tk.Spinbox(self.det_labelframe_1, values = self.choices, bg =  '#0C1021', fg = DGR,  font = ('Verdana',8), cursor = 'hand2')
+        self.spinbox = tk.Spinbox(self.det_labelframe_1, values = self.choices, bg =  '#0C1021', fg = DGR,  
+                                  font = ('Verdana',8), cursor = 'hand2', justify = tk.CENTER)
         self.spinbox.grid(row = 0, column =1, columnspan = 2, padx = 3, pady = 3, sticky = tk.EW)        
         
         #Company name
         self.complab = tk.Label(self.det_labelframe_1, text = 'Company Name', bg = BG, fg = FG, font = ('Verdana',8))         #some type of auto populate
         self.complab.grid(row = 1 , column = 1, padx = 3, pady = 3, sticky = tk.W)
-        self.comp_ent =  tk.Entry(self.det_labelframe_1, bg = BG, fg = FG, font = ('Verdana',8), width = 40,
+        self.comp_ent =  tk.Entry(self.det_labelframe_1, bg = BG, fg = FG, font = ('Verdana',8), width = 50,
                                cursor = 'xterm', selectbackground = 'dark goldenrod', insertbackground = 'white')
         self.comp_ent.grid(row = 1 , column = 2, padx = 3, pady = 3, sticky = tk.E)        
         
         #Contact Info
         self.contlab = tk.Label(self.det_labelframe_1, text = 'Contact Name', bg = BG, fg = FG, font = ('Verdana',8))
         self.contlab.grid(row = 2 , column = 1, padx = 3, pady = 3, sticky = tk.W)
-        self.cont_ent =  tk.Entry(self.det_labelframe_1, bg = BG, fg = FG,  font = ('Verdana',8), width = 40,
+        self.cont_ent =  tk.Entry(self.det_labelframe_1, bg = BG, fg = FG,  font = ('Verdana',8), width = 50,
                                cursor = 'xterm', selectbackground = 'dark goldenrod', insertbackground = 'white' )
         self.cont_ent.grid(row = 2 , column = 2, padx = 3, pady = 3, sticky = tk.E) 
         
         #Medium used i.e. email, phone call, meeting , etc.
         self.medlab = tk.Label(self.det_labelframe_1, text = 'Medium Used', bg = BG, fg = FG, font = ('Verdana',8))           #Think about using a spinbox
         self.medlab.grid(row = 3 , column = 1, padx = 3, pady = 3, sticky = tk.W)
-        self.med_ent =  tk.Entry(self.det_labelframe_1, bg = BG, fg = FG, font = ('Verdana',8), width = 40,
+        self.med_ent =  tk.Entry(self.det_labelframe_1, bg = BG, fg = FG, font = ('Verdana',8), width = 50,
                               cursor = 'xterm', selectbackground = 'dark goldenrod', insertbackground = 'white' )
         self.med_ent.grid(row = 3 , column = 2, padx = 3, pady = 3, sticky = tk.E)        
         
         #Description of transaction
         self.desclab = tk.Label(self.det_labelframe_1, text = 'Description', bg = BG, fg = FG, font = ('Verdana',8))
         self.desclab.grid(row = 4 , column = 1, padx = 3, pady = 3, sticky = tk.W)
-        self.desc_text = tk.Text(self.det_labelframe_1, bg = BG, fg = FG, font = ('Verdana',8), height = 5, width = 40,
+        self.desc_text = tk.Text(self.det_labelframe_1, bg = BG, fg = FG, font = ('Verdana',8), height = 5, width = 50,
                                  cursor = 'xterm', selectbackground = 'dark goldenrod', selectforeground = 'black', insertbackground = 'white')
         self.desc_text.grid(row = 4, column = 2, padx = 3, pady = 3, sticky = tk.E)           
 
@@ -178,7 +180,7 @@ class CallLogWindow:
         #Going forward what to do
         self.fwdlab = tk.Label(self.det_labelframe_1, text = 'Forward', bg = BG, fg = FG, font = ('Verdana',8))
         self.fwdlab.grid(row = 5, column = 1, padx = 3, pady = 3, sticky = tk.W) 
-        self.fwd_text = tk.Text(self.det_labelframe_1, bg = BG, fg = FG, font = ('Verdana',8), height = 5, width = 40,
+        self.fwd_text = tk.Text(self.det_labelframe_1, bg = BG, fg = FG, font = ('Verdana',8), height = 5, width = 50,
                                 cursor = 'xterm', selectbackground = 'dark goldenrod', selectforeground = 'black', insertbackground = 'white')
         self.fwd_text.grid(row = 5, column = 2, padx = 3, pady = 3, sticky = tk.E)   
         
@@ -187,15 +189,17 @@ class CallLogWindow:
         #BUTTON WIDGET -----------------------------------------------------------------------------------------------------
         self.submitbutton = tk.Button(self.det_labelframe_1, bg = BG, fg = FG, font = ('Verdana',8), cursor = 'hand2',
                                    text = 'SUBMIT', command = lambda: self.pull_entry_data())   #self.enter_new_entry())     
-        self.submitbutton.grid(row = 6, column = 1, columnspan = 2,  padx = 3, pady = 3, sticky = tk.EW)             
+        self.submitbutton.grid(row = 6, column = 1, columnspan = 2,  padx = 3, pady = 3, sticky = tk.EW)
         
+        #self.submitbutton.bind('<Enter>', self.submitbutton.config(fg = SFG))               < ---  Not Working
+        #self.submitbutton.bind('<Leave>', self.submitbutton.config(fg = FG))        
         
         #Bottom Section--------------
         self.det_labelframe_2 = tk.LabelFrame(self.selection_frame, text = 'Detail Window 2', 
                                             bg =  BG,  fg =  FG,  font = ('Verdana',8,'bold'))
         self.det_labelframe_2.grid(row = 2, padx = 3, pady = 5, sticky =  tk.NS) 
         
-        self.det_text = tk.Text(self.det_labelframe_2, bg = BG, fg = FG, font = ('Verdana',8), height = 12, width = 55,
+        self.det_text = tk.Text(self.det_labelframe_2, bg = BG, fg = FG, font = ('Verdana',8), height = 12, width = 65,
                                 cursor = 'xterm', selectbackground = 'dark goldenrod', selectforeground = 'black', insertbackground = 'white')
         self.det_text.grid(row = 0, column = 0, padx = 5, pady = 5, sticky = tk.NS) 
         
@@ -247,6 +251,7 @@ class CallLogWindow:
         fwd_T = self.fwd_text.get(1.0, tk.END)
         
         pulled_data_array = (sbox, comp_E, cont_E, med_E, desc_T, fwd_T)
+        
         for i in pulled_data_array:
             print(i)
 
@@ -267,7 +272,9 @@ class CallLogWindow:
                   'FRIDAY':self.f_lbox}
 
         fields[args[0]].insert(tk.END, '{} Entry:'.format(args[0]))
+        
         for i in args[1::]:
+            
             j = str(i).strip('\n')
             fields[args[0]].insert(tk.END, j)
 
@@ -299,6 +306,7 @@ class CallLogWindow:
         if c == 'a':
             widge.bind('<Enter>', self.change_acc_color)
             widge.bind('<Leave>', self.change_acc_def_color)
+            
         if c == 's':
             widge.bind('<Enter>', self.change_select_color)
             widge.bind('<Leave>', self.change_select_def_color)
@@ -329,12 +337,15 @@ class CallLogWindow:
                              self.f_lbox]
         
         for i in filtered:
+            
             if i == event.widget:
                 event.widget.config(height = 8)
                 event.widget.master.config(fg = DGR)        #Change FG color of labelframe so we know who has focus
+                
             else:
                 i.config(height = 3)
                 i.master.config(fg = 'white')                           #All other labelframes changed back to white default
+                
         return
     
     
@@ -392,10 +403,18 @@ class CallLogWindow:
         
         Binded to Button-2 - which is Middle Mouse Button
         """
+        
         try:
             copytext = event.widget.selection_get()
-            self.parent.clipboard_append(copytext)
-            print(copytext)
+            print(type(copytext))
+            print(len(copytext))
+            
+            if len(copytext) <= 1:
+                self.clipboard_warning()
+                
+            else:
+                self.parent.clipboard_append(copytext)
+                print('Succesful copy of selected text to Clipboard')
             
         except Exception:
             self.clipboard_error_warning()
@@ -404,12 +423,27 @@ class CallLogWindow:
     
     
     #----------------------------------------------------------------------------------------------
-    def clipboard_error_warning(self):
+    def clipboard_warning(self):
         """ 
-        
+        Func is called to warn users that it has been detected nothing was actually copied to clipboard
         """
         
-        mb.showerror(title = 'Error with Clipboard', message = 'No items highlighted.\nPlease try again.')
+        mb.showwarning(title = 'Warning', message =  'App detected its possible that\nno text was actually selected')
+        
+        return
+    
+    
+    #----------------------------------------------------------------------------------------------
+    def clipboard_error_warning(self):
+        """ 
+        Func - error message box popup to let user know there was an error attempting to copy text.
+        
+        FORWARD - Move to a double cliick (some users may accidently right click and become a nusence.
+        - or - 
+        Make it a turn on or off functionality
+        """
+        
+        mb.showerror(title = 'Error with Clipboard', message = 'No items highlighted. Please try again.\n(Text needs to be highlighted before right click is applied)')
         
         return
     
