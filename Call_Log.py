@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog as fd
+from tkinter import messagebox as mb
 import os
 
 
@@ -40,9 +41,14 @@ class CallLogWindow:
         self.loadmenu.add_command(label = "New DB", command = lambda:  None)  #self.ask_db_filename())      #self.new_database())
         self.loadmenu.add_command(label = "Load Database", command = lambda: None)  #self.open_db_file())           #self.Database('START'))
         self.loadmenu.add_command(label = "Add Note", command = lambda: None) #self.check_if_db_open())       #add_note_to_db())
-
+        
         self.calllog_menu.add_cascade(label = "Load", menu = self.loadmenu)
-
+        
+        #Help Menu -----------------------------------------------------------------------------------------------------
+        self.helpmenu = tk.Menu(self.calllog_menu, tearoff = 0, background='#0C1021', foreground='white', activebackground='dark goldenrod', activeforeground='white')
+        self.helpmenu.add_command(label = "Tips on Apps Usage", command = lambda: None) 
+        
+        self.calllog_menu.add_cascade(label = "Help", menu = self.helpmenu)
 
         #LOAD TO WINDOW
         # ----------------------------------------------------------------------------------------------------------
@@ -158,12 +164,16 @@ class CallLogWindow:
                                  cursor = 'xterm', selectbackground = 'dark goldenrod', selectforeground = 'black', insertbackground = 'white')
         self.desc_text.grid(row = 4, column = 2, padx = 3, pady = 3, sticky = tk.E)           
 
+        self.desc_text.bind('<Button-3>', self.copy_highlighted_text)
+
         #Going forward what to do
         self.fwdlab = tk.Label(self.det_labelframe_1, text = 'Forward', bg = BG, fg = FG, font = ('Verdana',8))
         self.fwdlab.grid(row = 5, column = 1, padx = 3, pady = 3, sticky = tk.W) 
         self.fwd_text = tk.Text(self.det_labelframe_1, bg = BG, fg = FG, font = ('Verdana',8), height = 5, width = 40,
                                 cursor = 'xterm', selectbackground = 'dark goldenrod', selectforeground = 'black', insertbackground = 'white')
-        self.fwd_text.grid(row = 5, column = 2, padx = 3, pady = 3, sticky = tk.E)     
+        self.fwd_text.grid(row = 5, column = 2, padx = 3, pady = 3, sticky = tk.E)   
+        
+        self.fwd_text.bind('<Button-3>', self.copy_highlighted_text)
         
         #BUTTON WIDGET -----------------------------------------------------------------------------------------------------
         self.submitbutton = tk.Button(self.det_labelframe_1, bg = BG, fg = FG, font = ('Verdana',8), cursor = 'hand2',
@@ -178,9 +188,10 @@ class CallLogWindow:
         
         self.det_text = tk.Text(self.det_labelframe_2, bg = BG, fg = FG, font = ('Verdana',8), height = 12, width = 55,
                                 cursor = 'xterm', selectbackground = 'dark goldenrod', selectforeground = 'black', insertbackground = 'white')
-        self.det_text.grid(row = 0, column = 0, padx = 5, pady = 5, sticky = tk.NS)         
+        self.det_text.grid(row = 0, column = 0, padx = 5, pady = 5, sticky = tk.NS) 
+        
+        self.det_text.bind('<Button-3>', self.copy_highlighted_text)
           
-
     
     
     #----------------------------------------------------------------------------------------------
@@ -352,8 +363,41 @@ class CallLogWindow:
     
     #----------------------------------------------------------------------------------------------
     def change_select_def_color(self, event):
-        """ """
+        """ 
+        
+        """
+        
         self.lab_selection.config(fg = 'white')
+        
+        return
+    
+    
+    #----------------------------------------------------------------------------------------------
+    def copy_highlighted_text(self, event):
+        """
+        Func - the widgets have been binded to this function to take all the highlighted text and copy it to
+        the computers clipboard
+        
+        Binded to Button-2 - which is Middle Mouse Button
+        """
+        try:
+            copytext = event.widget.selection_get()
+            self.parent.clipboard_append(copytext)
+            print(copytext)
+            
+        except Exception:
+            self.clipboard_error_warning()
+        
+        return
+    
+    
+    #----------------------------------------------------------------------------------------------
+    def clipboard_error_warning(self):
+        """ 
+        
+        """
+        
+        mb.showerror(title = 'Error with Clipboard', message = 'No items highlighted.\nPlease try again.')
         
         return
     
@@ -394,7 +438,6 @@ class CallLogWindow:
         
 #----------------------------------------------------------------------------------------------    
 if __name__ == '__main__':
-    
     root = tk.Tk()
     CallLogWindow(root)
     root.mainloop()
