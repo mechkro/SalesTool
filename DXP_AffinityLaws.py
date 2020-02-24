@@ -46,6 +46,7 @@ class AffinityCalc(tk.Tk):
                              cursor = 'hand2')
         
         self.filemenu.add_command(label = "Calc RPM", command = lambda: self.find_rpm_required())
+        self.filemenu.add_command(label = "PD Affinity", command = lambda: PDAffinity())
         self.menubar.add_cascade(label = "Alt Calcs", menu = self.filemenu)
 
         self.config(bg='#0C1021', menu = self.menubar)
@@ -522,9 +523,9 @@ class SystemCurve:
 
 
 #---------------------------------------------------------------
-class PDAffinity:
+class PDAffinity(AffinityCalc):
     
-    def __init__(self, parent):
+    def __init__(self):
         """
         New toplevel frame to house widgets for calculating PD pumps affinity laws
              - We need to calculate the number we will use to carry out affinity equations
@@ -551,20 +552,26 @@ class PDAffinity:
             - HORSEPOWER:
                     - The horsepower required changes by the cube of the number.
                     - ex.
-                    - 
+                    -
+
+        Design: Each widget will be added to the bottom of the frame in gradual steps.
+        After each entry of answers the next widgets will be made, and so on.
              
         """
         
-        self.parent = parent
-        self.parent.iconify()
-        
+        super().__init__(self)
+
+        self.iconify()
         self.pd_win = tk.Toplevel(self)
 
         self.newrpm = tk.Entry(self.pd_win)
-        self.newnumb.grid()
+        self.newrpm.grid(row = 1, column = 1, padx = 5, pady = 5)
 
         self.currpm = tk.Entry(self.pd_win)
-        self.currpm.grid()
+        self.currpm.grid(row = 2, column = 1, padx = 5, pady = 5)
+
+        self.ok_button = tk.Button(self.pd_win, text = 'Ok', command = self.gather_establish_numb)
+        self.ok_button.grid(row = 3, column = 0, columnspan = 2, padx = 5, pady = 5)
 
         tk.Toplevel.mainloop()
 
@@ -580,18 +587,28 @@ class PDAffinity:
         nrpm = float(self.newrpm.get())
         crpm = float(self.currpm.get())
         
-        establish_numb = nrpm/crpm
+        establish_numb = nrpm/crpm            #Either will be a multiplier or a fraction between 0 and 1
+        self.new_capacity(establish_numb)
+                
         
 
-    def new_capacity(self):
+    def new_capacity(self, e_numb):
         """
+        Next progression of widgets to be made and put on frame. Will entail the following:
+        
         CAPACITY (flow):
                     - The capacity or amount of fluid you are pumping varies directly with this number.
                     - ex.
                     - 3500/1750rpm = 2      --->  100gpm(3500rpm) x 2 = 200gpm
                     - 1500/3000 rpm = 0.5   --->  50m^3/hr(1500rpm) x 0.5 = 25m^3/hr
         """
-        
+
+        nflow = tk.StringVar()
+        self.newflow = tk.Enter(self.pd_Win, variable = nflow.set())
+        self.newflow.grid(row = 3, column = 0, columnspan = 2, padx = 5, pady = 5)
+
+        self.ok_button.row_configure(row = 4)
+        self.ok_button.config(command = self.new_head)
         pass
     
 
@@ -603,6 +620,11 @@ class PDAffinity:
                     - 50ft head x (2^2)     --->  50x4 = 200ft head
                     - 20m head  x (0.5^2)   --->  20x0.25 = 5m head
         """
+        self.newhead = tk.Enter(self.pd_Win)
+        self.newhead.grid(row = 4, column = 0, columnspan = 2, padx = 5, pady = 5)
+
+        self.ok_button.row_configure(row = 5)
+        self.ok_button.config(command = self.new_hp)
         
         pass
     
@@ -614,6 +636,11 @@ class PDAffinity:
                     - ex.
                     - 
         """
+        self.newhp = tk.Enter(self.pd_Win)
+        self.newhp.grid(row = 4, column = 0, columnspan = 2, padx = 5, pady = 5)
+
+        self.ok_button.row_configure(row = 5)
+        self.ok_button.config(bg = 'red')
         
         pass
 
