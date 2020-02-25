@@ -46,7 +46,7 @@ class AffinityCalc(tk.Tk):
                              cursor = 'hand2')
         
         self.filemenu.add_command(label = "Calc RPM", command = lambda: self.find_rpm_required())
-        self.filemenu.add_command(label = "PD Affinity", command = lambda: PDAffinity())
+        self.filemenu.add_command(label = "PD Affinity", command = lambda: self.pd_affinity())
         self.menubar.add_cascade(label = "Alt Calcs", menu = self.filemenu)
 
         self.config(bg='#0C1021', menu = self.menubar)
@@ -175,6 +175,7 @@ class AffinityCalc(tk.Tk):
         #self.rpmframe = tk.Frame(self, bg = BG)
         #self.rpmframe.grid(row = 0, column = 0)
         """
+        
         self.speedlf.config(text = 'RPM Needed for:')
         self.speed1.destroy()
         self.speed2.destroy()
@@ -188,6 +189,10 @@ class AffinityCalc(tk.Tk):
 
     #----------------------------------------------------------------
     def check_realistic(self):
+        """
+
+        """
+        
         cf = float(self.cflow.get())
         cp = float(self.chead.get())
         chp = float(self.chp.get())
@@ -400,6 +405,7 @@ class AffinityCalc(tk.Tk):
         """
 
         """
+        
         print(self.winfo_children())
         self.winfo_children[-1].lift()
         self.lift()
@@ -418,6 +424,7 @@ class AffinityCalc(tk.Tk):
 
         Hp = z2 - z1 + f*(L/D)* v^2/2*g + SUM(v^2/2*g)
         """
+        
         pass
 
 
@@ -490,42 +497,22 @@ class AffinityCalc(tk.Tk):
         return
 
 
+    #--------------------------------------------------------------------------
     def continuity_eq(self):
         """
         For:
              - incompressible flow - A_1 * V_1 = A_2 * V_2
              - compressable flow - rho_1 * A_1 * V_1 = rho_2 * A_2 * V_2
         """
+        
         pass
-        
-    
-        
-        
-        
-
-
-#---------------------------------------------------------------
-class SystemCurve:
-    
-    def __init__(self, parent):
-        """
-        Attempt to create a function that will help identify or calculate a high-level calc of system curve
-             - Could also just be used as a reminder of system curves and there interactions
-             - Define all that goes into them
-        """
-        
-        self.parent = parent
-        self.parent.iconify()
-        
-        tk.Toplevel.__init__(self)
-        tk.Toplevel.mainloop()
 
 
 
-#---------------------------------------------------------------
-class PDAffinity(AffinityCalc):
-    
-    def __init__(self):
+
+    ###################################################################################################################################333
+    #-----------------------------------------------------------------------------
+    def pd_affinity(self):
         """
         New toplevel frame to house widgets for calculating PD pumps affinity laws
              - We need to calculate the number we will use to carry out affinity equations
@@ -558,24 +545,29 @@ class PDAffinity(AffinityCalc):
         After each entry of answers the next widgets will be made, and so on.
              
         """
+
+        self.pd_win = tk.Toplevel(self, bg = BG)
+        self.pd_win.grid()
+
+        self.instruct_pd_lab = tk.Label(self.pd_win, bg = BG, fg = FG,
+                                        text = 'User must enter current and the new rpm set range\nto move forward')
+        self.instruct_pd_lab.grid(row = 0, columnspan = 2, padx = 5, pady = 5)
         
-        super().__init__(self)
-
-        self.iconify()
-        self.pd_win = tk.Toplevel(self)
-
-        self.newrpm = tk.Entry(self.pd_win)
+        self.nrpmlab = tk.Label(self.pd_win, bg = BG, fg = FG,
+                                text = "New RPM's")
+        self.nrpmlab.grid(row = 1, column = 0, padx = 5, pady = 5)
+        
+        self.newrpm = tk.Entry(self.pd_win, bg = BG, fg = FG)
         self.newrpm.grid(row = 1, column = 1, padx = 5, pady = 5)
 
-        self.currpm = tk.Entry(self.pd_win)
+        self.currpm = tk.Entry(self.pd_win, bg = BG, fg = FG)
         self.currpm.grid(row = 2, column = 1, padx = 5, pady = 5)
 
         self.ok_button = tk.Button(self.pd_win, text = 'Ok', command = self.gather_establish_numb)
         self.ok_button.grid(row = 3, column = 0, columnspan = 2, padx = 5, pady = 5)
 
-        tk.Toplevel.mainloop()
 
-
+    #--------------------------------------------------------------------------
     def gather_establish_numb(self):
         """
          - PD_constant = New Speed / Old speed
@@ -589,9 +581,10 @@ class PDAffinity(AffinityCalc):
         
         establish_numb = nrpm/crpm            #Either will be a multiplier or a fraction between 0 and 1
         self.new_capacity(establish_numb)
-                
-        
 
+        
+            
+    #--------------------------------------------------------------------------
     def new_capacity(self, e_numb):
         """
         Next progression of widgets to be made and put on frame. Will entail the following:
@@ -609,9 +602,11 @@ class PDAffinity(AffinityCalc):
 
         self.ok_button.row_configure(row = 4)
         self.ok_button.config(command = self.new_head)
+
         pass
     
 
+    #--------------------------------------------------------------------------
     def new_head(self):
         """
         HEAD:
@@ -620,6 +615,7 @@ class PDAffinity(AffinityCalc):
                     - 50ft head x (2^2)     --->  50x4 = 200ft head
                     - 20m head  x (0.5^2)   --->  20x0.25 = 5m head
         """
+        
         self.newhead = tk.Enter(self.pd_Win)
         self.newhead.grid(row = 4, column = 0, columnspan = 2, padx = 5, pady = 5)
 
@@ -629,6 +625,7 @@ class PDAffinity(AffinityCalc):
         pass
     
 
+    #--------------------------------------------------------------------------
     def new_hp(self):
         """
         - HORSEPOWER:
@@ -636,6 +633,7 @@ class PDAffinity(AffinityCalc):
                     - ex.
                     - 
         """
+        
         self.newhp = tk.Enter(self.pd_Win)
         self.newhp.grid(row = 4, column = 0, columnspan = 2, padx = 5, pady = 5)
 
@@ -643,6 +641,27 @@ class PDAffinity(AffinityCalc):
         self.ok_button.config(bg = 'red')
         
         pass
+    
+        
+        
+        
+
+
+#---------------------------------------------------------------
+class SystemCurve:
+    
+    def __init__(self, parent):
+        """
+        Attempt to create a function that will help identify or calculate a high-level calc of system curve
+             - Could also just be used as a reminder of system curves and there interactions
+             - Define all that goes into them
+        """
+        
+        self.parent = parent
+        self.parent.iconify()
+        
+        tk.Toplevel.__init__(self)
+        tk.Toplevel.mainloop()
 
         
 
