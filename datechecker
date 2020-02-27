@@ -1,0 +1,136 @@
+import datetime as dt
+import Tkinter as tk
+import collections as clc
+import random as rand
+import time
+
+BG =  '#0C1021'
+FG = 'white'
+
+today_date = dt.datetime.today()
+
+months_hold = clc.OrderedDict()
+
+tempr = {'JAN':(1,31),
+                'FEB':(2,18),
+                'MAR':(3,31),
+                'APR':(4,30),
+                'MAY':(5,31),
+                'JUN':(6,30),
+                'JUL':(7,31),
+                'AUG':(8,31),
+                'SEP':(9,30),
+                'OCT':(10,31),
+                'NOV':(11,30),
+                'DEC':(12,31)}
+temp = [('JAN',31),('FEB',28),('MAR',31),('APR',30),('MAY',31),('JUN',30), ('JUL',31), ('AUG',31),('SEP',30),('OCT',31),('NOV',30), ('DEC',31)]
+for i in temp:
+    months_hold[i[0]] = i[1]
+
+
+
+class DateCheck:
+    def __init__(self, parent):
+        self.parent = parent
+
+        self.frame = tk.Frame(self.parent, bg = BG)
+        self.frame.grid()
+
+        self.mlab = tk.Label(self.frame, text = 'Choose Month', bg = BG, fg = FG)
+        self.mlab.grid(row = 0, padx = 5, pady = 5)
+        
+        self.sbox = tk.Spinbox(self.frame, values = months_hold.keys(), bg = BG, fg = FG)
+        self.sbox.grid(row = 1, padx = 10, pady = 10)
+
+        self.b = tk.Button(self.frame, text = 'ok', command = self.load_spinbox, bg = BG, fg = FG)
+        self.b.grid(row = 2, padx = 5, pady = 5)
+
+    #--------------------------------------------------------------------------
+    def load_spinbox(self):
+        day = int(months_hold[self.sbox.get()])
+        days = range(1,day+1)
+
+        self.sbox.config(state = tk.DISABLED, disabledbackground = BG, disabledforeground = 'dark goldenrod')
+
+        self.dlab = tk.Label(self.frame, text = 'Choose day', bg = BG, fg = FG)
+        self.dlab.grid(row = 2, padx = 5, pady = 5)
+        
+        self.dsbox = tk.Spinbox(self.frame, values = days, bg = BG, fg = FG)
+        self.dsbox.grid(row = 3, padx = 10, pady = 10)
+        
+        self.b.config(command = self.load_year, bg = BG, fg = FG)
+        self.b.grid(row = 4, padx = 5, pady = 5)
+        self.parent.update()
+
+
+    #--------------------------------------------------------------------------
+    def load_year(self):
+
+        self.ylab = tk.Label(self.frame, text = 'Choose year', bg = BG, fg = FG)
+        self.ylab.grid(row = 4, padx = 5, pady = 5)
+
+        self.dsbox.config(state = tk.DISABLED, disabledbackground = BG, disabledforeground = 'dark goldenrod')
+        
+        self.ysbox = tk.Spinbox(self.frame, values = range(2000,2021), bg = BG, fg = FG)
+        self.ysbox.grid(row = 5, padx = 10, pady = 10)
+
+        self.b.config(command = self.days_diff, bg = BG, fg = FG)
+        self.b.grid(row = 6, padx = 5, pady = 5)
+        
+        self.parent.update()
+
+    #--------------------------------------------------------------------------
+    def days_diff(self):
+        temp = {'JAN':1,
+                'FEB':2,
+                'MAR':3,
+                'APR':4,
+                'MAY':5,
+                'JUN':6,
+                'JUL':7,
+                'AUG':8,
+                'SEP':9,
+                'OCT':10,
+                'NOV':11,
+                'DEC':12}
+
+        m = temp[self.sbox.get()]
+        d = self.dsbox.get()
+        y = self.ysbox.get()
+        datetxt = dt.datetime.strptime('{}/{}/{}'.format(m,d,y),'%m/%d/%Y')
+        diff = dt.datetime.today()-datetxt
+        print 'Days since todays date: {}'.format(diff.days)
+        print 'Which equals {} years'.format(diff.days/365.0)
+
+        self.testing_grounds()
+
+    def testing_grounds(self):
+
+        itr = 0
+        tots = 0
+        for i in range(100):
+            k = rand.choice(tempr.keys())
+            m = tempr[k][0]
+            d = tempr[k][1]
+            y = rand.randrange(2019,2020)
+            dtxt = dt.datetime.strptime('{}/{}/{}'.format(m,d,y),'%m/%d/%Y')
+            diff = dt.datetime.today()-dtxt
+            tots += 1
+
+            print '\n\n'
+            print dtxt
+            print 'Days since todays date: {}'.format(diff.days)
+
+            if diff.days >= 300:
+                print 'NEED TO F/U!!!!!!'
+                time.sleep(1)
+                itr += 1
+            else:
+                pass
+            print '\nTotal Followups:  {} out of {}'.format(itr, tots)
+        
+
+if __name__ == '__main__':
+    root = tk.Tk()
+    DateCheck(root)
+    root.mainloop()
