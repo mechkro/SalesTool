@@ -1,4 +1,4 @@
-import Tkinter as tk
+import tkinter as tk
 
 """
 This is the controller file - will act as the traffic director for active and non-active windows based
@@ -10,7 +10,8 @@ BG = '#0C1021'
 FG = 'white'
 
 def config_frame(index):
-
+    """ """
+    
     fconfig = {'LoginWindow':(BG,FG,('system',12,'bold')),
                     'AccountsContacts':(BG,FG,('system',12,'bold')),
                     'ToDo':(BG,FG,('system',12,'bold')),
@@ -42,6 +43,7 @@ class MainStart(tk.Tk):
 
 
     def show_window(self, logwin):
+        
         """Recieves window to create and changes title of window"""
 
         window_title = {
@@ -60,6 +62,7 @@ class MainStart(tk.Tk):
 
 
 class LoginWindow(tk.Frame):
+    
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         
@@ -76,11 +79,12 @@ class LoginWindow(tk.Frame):
 
         for x,i in enumerate((label, b_1,b_2,b_3,b_4,b_5)):
             i.config(bg = conf[0], fg = conf[1], font = conf[2])
-            i.grid(row = x+1, column = 0,  padx = 5, pady = 5)
+            i.grid(row = x+1, column = 0,  padx = 5, pady = 5, sticky = tk.EW)
             
 
 
 class AccountsContacts(tk.Frame):
+    
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         
@@ -89,18 +93,21 @@ class AccountsContacts(tk.Frame):
         
         label = tk.Label(self, text = 'Accounts & Contacts')
        
-        b_1 = tk.Button(self, text = 'Accounts/Contacts', command  = lambda: controller.show_window(AccountsContacts))
-        b_2 = tk.Button(self, text = 'ToDo', command  = lambda: controller.show_window(ToDo))
-        b_3 = tk.Button(self, text = 'CallLog', command  = lambda: controller.show_window(CallLog))
-        b_4 = tk.Button(self, text = 'Projects', command  = lambda: controller.show_window(Projects))
-        b_5 = tk.Button(self, text = 'BidSolicits', command  = lambda: controller.show_window(BidSolicits))
+        b_1 = tk.Button(self, text = 'Accounts/Contacts', command  = lambda: controller.show_window(AccountsContacts), state = tk.DISABLED)
+        b_2 = tk.Button(self, text = 'ToDo', command  = lambda: controller.show_window(ToDo), state = tk.NORMAL)
+        b_3 = tk.Button(self, text = 'CallLog', command  = lambda: controller.show_window(CallLog), state = tk.NORMAL)
+        b_4 = tk.Button(self, text = 'Projects', command  = lambda: controller.show_window(Projects), state = tk.NORMAL)
+        b_5 = tk.Button(self, text = 'BidSolicits', command  = lambda: controller.show_window(BidSolicits), state = tk.NORMAL)
 
         for x,i in enumerate((label, b_1,b_2,b_3,b_4,b_5)):
             i.config(bg = conf[0], fg = conf[1], font = conf[2])
-            i.grid(row = x+1, column = 0,  padx = 5, pady = 5)
+            i.grid(row = x+1, column = 0,  padx = 5, pady = 5, sticky = tk.EW)
+        
+        label.config(fg = 'green')
 
 
 class ToDo(tk.Frame):
+    
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         conf = config_frame('ToDo')
@@ -108,18 +115,21 @@ class ToDo(tk.Frame):
         
         label = tk.Label(self, text = 'To Dos')
        
-        b_1 = tk.Button(self, text = 'Accounts/Contacts', command  = lambda: controller.show_window(AccountsContacts))
-        b_2 = tk.Button(self, text = 'ToDo', command  = lambda: controller.show_window(ToDo))
-        b_3 = tk.Button(self, text = 'CallLog', command  = lambda: controller.show_window(CallLog))
-        b_4 = tk.Button(self, text = 'Projects', command  = lambda: controller.show_window(Projects))
-        b_5 = tk.Button(self, text = 'BidSolicits', command  = lambda: controller.show_window(BidSolicits))
+        b_1 = tk.Button(self, text = 'Accounts/Contacts', command  = lambda: controller.show_window(AccountsContacts), state = tk.NORMAL)
+        b_2 = tk.Button(self, text = 'ToDo', command  = lambda: controller.show_window(ToDo), state = tk.DISABLED)
+        b_3 = tk.Button(self, text = 'CallLog', command  = lambda: controller.show_window(CallLog), state = tk.NORMAL)
+        b_4 = tk.Button(self, text = 'Projects', command  = lambda: controller.show_window(Projects), state = tk.NORMAL)
+        b_5 = tk.Button(self, text = 'BidSolicits', command  = lambda: controller.show_window(BidSolicits), state = tk.NORMAL)
 
         for x,i in enumerate((label, b_1,b_2,b_3,b_4,b_5)):
             i.config(bg = conf[0], fg = conf[1], font = conf[2])
-            i.grid(row = x+1, column = 0,  padx = 5, pady = 5)
+            i.grid(row = x+1, column = 0,  padx = 5, pady = 5, sticky = tk.EW)
 
+        label.config(fg = 'green')
+            
 
 class CallLog(tk.Frame):
+    
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         conf = config_frame('CallLog')
@@ -127,18 +137,22 @@ class CallLog(tk.Frame):
         
         label = tk.Label(self, text = 'Call Logs')
        
-        b_1 = tk.Button(self, text = 'Accounts/Contacts', command  = lambda: controller.show_window(AccountsContacts))
-        b_2 = tk.Button(self, text = 'ToDo', command  = lambda: controller.show_window(ToDo))
-        b_3 = tk.Button(self, text = 'CallLog', command  = lambda: controller.show_window(CallLog))
-        b_4 = tk.Button(self, text = 'Projects', command  = lambda: controller.show_window(Projects))
-        b_5 = tk.Button(self, text = 'BidSolicits', command  = lambda: controller.show_window(BidSolicits))
+        b_1 = tk.Button(self, text = 'Accounts/Contacts', command  = lambda: controller.show_window(AccountsContacts), state = tk.NORMAL)
+        b_2 = tk.Button(self, text = 'ToDo', command  = lambda: controller.show_window(ToDo), state = tk.NORMAL)
+        b_3 = tk.Button(self, text = 'CallLog', command  = lambda: controller.show_window(CallLog), state = tk.DISABLED)
+        b_4 = tk.Button(self, text = 'Projects', command  = lambda: controller.show_window(Projects), state = tk.NORMAL)
+        b_5 = tk.Button(self, text = 'BidSolicits', command  = lambda: controller.show_window(BidSolicits), state = tk.NORMAL)
 
         for x,i in enumerate((label, b_1,b_2,b_3,b_4,b_5)):
             i.config(bg = conf[0], fg = conf[1], font = conf[2])
-            i.grid(row = x+1, column = 0,  padx = 5, pady = 5)
+            i.grid(row = x+1, column = 0,  padx = 5, pady = 5, sticky = tk.EW)
+
+        label.config(fg = 'green')
+
 
 
 class Projects(tk.Frame):
+    
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         conf = config_frame('Projects')
@@ -146,18 +160,22 @@ class Projects(tk.Frame):
         
         label = tk.Label(self, text = 'Projects')
        
-        b_1 = tk.Button(self, text = 'Accounts/Contacts', command  = lambda: controller.show_window(AccountsContacts))
-        b_2 = tk.Button(self, text = 'ToDo', command  = lambda: controller.show_window(ToDo))
-        b_3 = tk.Button(self, text = 'CallLog', command  = lambda: controller.show_window(CallLog))
-        b_4 = tk.Button(self, text = 'Projects', command  = lambda: controller.show_window(Projects))
-        b_5 = tk.Button(self, text = 'BidSolicits', command  = lambda: controller.show_window(BidSolicits))
+        b_1 = tk.Button(self, text = 'Accounts/Contacts', command  = lambda: controller.show_window(AccountsContacts), state = tk.NORMAL)
+        b_2 = tk.Button(self, text = 'ToDo', command  = lambda: controller.show_window(ToDo), state = tk.NORMAL)
+        b_3 = tk.Button(self, text = 'CallLog', command  = lambda: controller.show_window(CallLog), state = tk.NORMAL)
+        b_4 = tk.Button(self, text = 'Projects', command  = lambda: controller.show_window(Projects), state = tk.DISABLED)
+        b_5 = tk.Button(self, text = 'BidSolicits', command  = lambda: controller.show_window(BidSolicits), state = tk.NORMAL)
 
         for x,i in enumerate((label, b_1,b_2,b_3,b_4,b_5)):
             i.config(bg = conf[0], fg = conf[1], font = conf[2])
-            i.grid(row = x+1, column = 0,  padx = 5, pady = 5)
+            i.grid(row = x+1, column = 0,  padx = 5, pady = 5, sticky = tk.EW)
+
+        label.config(fg = 'green')
+
 
 
 class BidSolicits(tk.Frame):
+    
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         conf = config_frame('BidSolicits')
@@ -165,18 +183,17 @@ class BidSolicits(tk.Frame):
         
         label = tk.Label(self, text = 'BidSolicits')
        
-        b_1 = tk.Button(self, text = 'Accounts/Contacts', command  = lambda: controller.show_window(AccountsContacts))
-        b_2 = tk.Button(self, text = 'ToDo', command  = lambda: controller.show_window(ToDo))
-        b_3 = tk.Button(self, text = 'CallLog', command  = lambda: controller.show_window(CallLog))
-        b_4 = tk.Button(self, text = 'Projects', command  = lambda: controller.show_window(Projects))
-        b_5 = tk.Button(self, text = 'BidSolicits', command  = lambda: controller.show_window(BidSolicits))
+        b_1 = tk.Button(self, text = 'Accounts/Contacts', command  = lambda: controller.show_window(AccountsContacts), state = tk.NORMAL)
+        b_2 = tk.Button(self, text = 'ToDo', command  = lambda: controller.show_window(ToDo), state = tk.NORMAL)
+        b_3 = tk.Button(self, text = 'CallLog', command  = lambda: controller.show_window(CallLog), state = tk.NORMAL)
+        b_4 = tk.Button(self, text = 'Projects', command  = lambda: controller.show_window(Projects), state = tk.NORMAL)
+        b_5 = tk.Button(self, text = 'BidSolicits', command  = lambda: controller.show_window(BidSolicits), state = tk.DISABLED)
 
         for x,i in enumerate((label, b_1,b_2,b_3,b_4,b_5)):
             i.config(bg = conf[0], fg = conf[1], font = conf[2])
-            i.grid(row = x+1, column = 0,  padx = 5, pady = 5)
+            i.grid(row = x+1, column = 0,  padx = 5, pady = 5, sticky = tk.EW)
 
-
-
+        label.config(fg = 'green')
 
 
 
