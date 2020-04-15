@@ -1,0 +1,632 @@
+*Pump to be replaced Grundfos recommends
+#Flygt type Impeller no. Free passage Discharge P2 (kW) Impeller type Curve no.
+CP3067 HT 261 34 50 1.2 Single channel 5
+CP3067 HT 263 34 50 1.2 Single channel 4
+CP3085 HT 250 40x40 80 2.4 Single channel 7
+CP3085 HT 252 40x40 80 2.4 Single channel 6
+#Flygt type Impeller no. Free passage Discharge P2 (kW) Impeller type Curve no.
+CP3085 LT 412 100 100 2 Single channel 11
+CP3085 LT 414 80x100 100 1.3 Single channel 10
+CP3085 MT 432 76 80 2 Single channel 9
+CP3085 MT 434 76 80 1.3 Single channel 8
+CP3085 MT 436 76 80 1.3 Single channel 7
+CP3085 MT 438 64x86 80 1.3 Single channel 6
+CP3085 MT 440 64x95 80 1.3 Single channel 5
+#Flygt type Impeller no. Free passage Discharge P2 (kW) Impeller type Curve no.
+CP3102 LT 410 55x100 150 3.1 2-channel 8
+CP3102 LT 411 52x96 150 3.1 2-channel 7
+CP3102 LT 412 54x88 150 3.1 2-channel 6
+CP3102 LT 440 100 150 3.1 Single channel 5
+CP3102 LT 441 100 150 3.1 Single channel 4
+CP3102 LT 442 100 150 3.1 Single channel 3
+
+
+#Grundfos type Curve no. Adaptor
+EF30.50.09.2 1 N/A
+EF30.50.11.2 2 N/A
+SE1.50.80.22.2 3 96105765
+SE1.50.80.22.2 3 96105765
+#Grundfos type Curve no. Adaptor
+SE1.80.100.22.4 4 96105782
+SE1.80.100.15.4 3 96105782
+SE1.80.80.22.4 2 96105765
+SE1.80.80.15.4 1 96105765
+SE1.80.80.15.4 1 96105765
+SE1.80.80.15.4 1 96105765
+SE1.80.80.15.4 1 96105765
+#Grundfos type Curve no. Adaptor
+SE1.80.100.30.4 2 96105787
+SE1.80.100.30.4 2 96105787
+SE1.80.100.22.4 1 96105787
+SE1.80.100.30.4 2 96105787
+SE1.80.100.30.4 2 96105787
+SE1.80.100.22.4 1 96105787
+
+------------------------------------------------------
+
+#Flygt type Impeller no. Free passage Discharge P2 (kW) Impeller type Curve no.
+CP3102 MT 430 76 100 3.1 Single channel 10
+CP3102 MT 432 76 100 3.1 Single channel 8
+CP3102 MT 433 76 100 3.1 Single channel 7
+CP3102 MT 435 76 100 3.1 Single channel 9
+CP3102 HT 252 52 80 4.4 Single channel 12
+CP3102 HT 254 46 80 4.4 Single channel 11
+#Flygt type Impeller no. Free passage Discharge P2 (kW) Impeller type Curve no.
+CP3126 MT 430 100x110 100 6.7 Single channel 9
+CP3126 MT 432 87x100 100 5.3 Single channel 8
+CP3126 HT 461 76 100 5.3 Single channel 6
+CP3126 HT 462 76 100 5.3 Single channel 5
+CP3126 HT 467 76 100 6.7 Single channel 7
+#Flygt type Impeller no. Free passage Discharge P2 (kW) Impeller type Curve no.
+CP3127 LT 410 76 150 5.9 2-channel 6
+CP3127 LT 411 76 150 4.7 2-channel 5
+CP3127 LT 412 76 150 4.7 2-channel 4
+CP3127 LT 441 107x117 150 5.9 Single channel 8
+CP3127 LT 442 100x110 150 4.7 Single channel 7
+#Grundfos type Curve no. Adaptor
+SE1.80.100.40.4 4 96105782
+SE1.80.100.30.4 3 96105782
+SE1.80.100.22.4 2 96105782
+SE1.80.100.15.4 1 96105782
+SE1.50.80.40.2 6 96105765
+SE1.50.80.30.2 5 96105765
+#Grundfos type Curve no. Adaptor
+SE1.100.100.75.4 4 96105782
+SE1.100.100.55.4 3 96105782
+SE1.80.100.55.4 2 96105782
+SE1.80.100.40.4 1 96105782
+SE1.80.100.55.4 2 96105782
+#Grundfos type Curve no. Adaptor
+SE1.100.150.75.4 3 96006638
+SE1.100.150.55.4 2 96006638
+SE1.100.150.40.4 1 96006638
+SE1.100.150.75.4 3 96006638
+SE1.100.150.55.4 2 96006638
+
+------------------------------------------------------
+
+Flygt type Impeller no. Free passage Discharge P2 (kW) Impeller type Curve no.
+CP3127 MT 430 100x110 150 5.9 Single channel 10
+CP3127 MT 431 90x100 150 4.7 Single channel 8
+CP3127 MT 432 87x100 150 4.7 Single channel 7
+CP3127 MT 433 82x100 150 4.7 Single channel 6
+CP3127 MT 434 80x100 150 4.7 Single channel 5
+CP3127 MT 435 100 150 5.9 Single channel 9
+CP3127 MT 436 100 150 4.7 Single channel 4
+Flygt type Impeller no. Free passage Discharge P2 (kW) Impeller type Curve no.
+CP3127 HT 480 76 100 5.9 Single channel 9
+CP3127 HT 481 76 100 5.9 Single channel 8
+CP3127 HT 483 76 100 4.7 Single channel 7
+CP3127 HT 484 76 100 4.7 Single channel 6
+CP3127 HT 485 76 100 4.7 Single channel 5
+Grundfos type Curve no. Adaptor
+SE1.80.100.55.4 3 96105787
+SE1.80.100.40.4 2 96105787
+SE1.80.100.40.4 2 96105787
+SE1.80.100.30.4 1 96105787
+SE1.80.100.30.4 1 96105787
+SE1.80.100.55.4 3 96105787
+SE1.80.100.30.4 1 96105787
+Grundfos type Curve no. Adaptor
+SE1.80.80.75.4 4 96105790
+SE1.80.100.55.4 3 96105782
+SE1.80.100.55.4 3 96105782
+SE1.80.100.40.4 2 96105782
+SE1.80.100.30.4 1 96105782
+
+------------------------------------------------------
+
+ABS type Impeller Free passage Discharge P2 (kW) Impeller type Curve no.
+Piranha S12-2 Grinder - 1 1/4” 1.2 Grinder 7
+Piranha S17-2 Grinder - 1 1/4” 1.7 Grinder 8
+Piranha S21-2 Grinder - 1 1/4” 2.1 Grinder 9
+Piranha S26-2 Grinder - 1 1/4” 2.6 Grinder 10
+Piranha M55-2 Grinder - DN50 5.5 Grinder 11
+Piranha M70-2 Grinder - DN50 7 Grinder 12
+Piranha M85-2 Grinder - DN50 8.5 Grinder 13
+ABS type Free passage Discharge P2 (kW) Impeller type Curve no.
+AS 0530 M12-2 40 2” 1.2 Vortex 4
+AS 0530 M17-2 40 2” 1.7 Vortex 5
+AS 0530 M26-2 40 2” 2.6 Vortex 6
+ABS type Free passage Discharge Pn Impeller type Curve no.
+AS 0630 M10-4 60 DN65 1 Vortex 8
+AS 0630 M13-4 60 DN65 1.3 Vortex 9
+AS 0630 M22-4 60 DN65 2.2 Vortex 10
+AS 0830 M10-4 60 DN80 1 Vortex 8
+AS 0830 M13-4 60 DN80 1.3 Vortex 9
+AS 0830 M22-4 60 DN80 2.2 Vortex 10
+AS 0840 M12-2 30 DN80 1.2 Contra Block 11
+AS 0840 M17-2 30 DN80 1.7 Contra Block 12
+AS 0840 M26-2 30 DN80 2.6 Contra Block 13
+Grundfos type Curve no.
+SEG.40.12.2 1
+SEG.40.15.2 2
+SEG.40.26.2 3
+SEG.40.26.2 3
+SEG.40.40.2 4
+APG.50.65.2 5
+APG.50.92.2 6
+Grundfos type Curve no.
+EF30.50.09.2 1
+EF30.50.11.2 2
+EF30.50.15.2 3
+Grundfos type Curve no.
+SEV.65.65.09.2 1
+SEV.65.65.11.2 2
+SEV.65.65.22.2 5
+SEV.65.65.09.2 1
+SEV.65.65.11.2 2
+SEV.65.80.22.2 6
+SE1.50.65.11.2 3
+SE1.50.65.15.2 4
+SE1.50.80.22.2 7
+
+
+------------------------------------------------------
+
+ABS type Free passage Discharge P2 (kW) Impeller type Curve no.
+AFP 0831 M30/4 80 DN80 3 Vortex 10
+AFP 0831 M22/4 80 DN80 2.2 Vortex 9
+AFP 0831 M15/4 80 DN80 1.5 Vortex 8
+AFP 0831 M13/6 80 DN80 1.3 Vortex 7
+AFP 0832 M70/2 80 DN80 7 Vortex 12
+AFP 0832 M40/2 80 DN80 4 Vortex 11
+AFP 0834 M110/2 80 DN80 11 Vortex 13
+ABS type Free passage Discharge P2 (kW) Impeller type Curve no.
+AFP 0841 M15/4 80 DN80 1.5 Contra Block 5
+AFP 0841 M13/6 80 DN80 1.3 Contra Block 4
+AFP 0842 M40/2 50 DN80 4 Contra Block 6
+ABS type Free passage Discharge P2 (kW) Impeller type Curve no.
+AFP 1031 M30/4 100 DN100 3 Vortex 13
+AFP 1031 M22/4 100 DN100 2.2 Vortex 12
+AFP 1031 M15/4 100 DN100 1.5 Vortex 11
+AFP 1031 M13/6 100 DN100 1.3 Vortex 10
+AFP 1032 M90/4 100 DN100 9 Vortex 16
+AFP 1032 M60/4 100 DN100 6 Vortex 16
+AFP 1032 M40/4 100 DN100 4 Vortex 15
+AFP 1032 M30/6 100 DN100 3 Vortex 14
+AFP 1033 M110/4 100 DN100 11 Vortex 18
+AFP 1033 M90/6 100 DN100 9 Vortex 17
+Grundfos type Curve no.
+SEV.80.80.22.4 3
+SEV.80.80.22.4 3
+SEV.80.80.15.4 2
+SEV.80.80.11.4 1
+SEV.80.80.60.2 5
+SEV.80.80.40.4 4
+SEV.80.80.75.2 6
+Grundfos type Curve no.
+SE1.80.80.15.4 2
+SEV.80.80.11.4 1
+SE1.50.80.30.2 3
+Grundfos type Curve no.
+SEV.100.100.30.4 4
+SEV.80.80.22.4 3
+SEV.80.80.15.4 2
+SEV.80.80.11.4 1
+SEV.100.100.75.4 7
+SEV.100.100.55.4 6
+SEV.100.100.40.4 5
+SEV.100.100.30.4 4
+SE1.100.100.75.4 9
+SE1.100.100.40.4 8
+
+------------------------------------------------------
+
+ABS type Free passage Discharge P2 (kW) Impeller type Curve no.
+AFP 1041 M30/4 90 DN100 3 Contra Block 10
+AFP 1041 M22/4 90 DN100 2.2 Contra Block 9
+AFP 1041 M15/4 90 DN100 1.5 Contra Block 8
+AFP 1041 M13/6 90 DN100 1.3 Contra Block 7
+AFP 1042 M60/4 100 DN100 6 Contra Block 13
+AFP 1042 M40/4 100 DN100 4 Contra Block 12
+AFP 1042 M90/4 100 DN100 9 Contra Block 14
+AFP 1042 M30/6 100 DN100 3 Contra Block 11
+ABS type Free passage Discharge P2 (kW) Impeller type Curve no.
+AFP 1043 M70/2 55 DN100 7 Contra Block 8
+AFP 1045 M185/4 100 DN100 18.5 Contra Block 11
+AFP 1045 M160/4 100 DN100 16 Contra Block 10
+AFP 1045 M110/4 100 DN100 11 Contra Block 9
+AFP 1045 M90/6 100 DN100 9 Contra Block 7
+AFP 1034 M200/2 75 DN100 20 Vortex 12
+ABS type Free passage Discharge P2 (kW) Impeller type Curve no.
+AFP 1541 M90/4 100 DN150 9 Contra Block 9
+AFP 1541 M60/4 100 DN150 6 Contra Block 8
+AFP 1541 M40/4 100 DN150 4 Contra Block 7
+AFP 1541 M30/6 100 DN150 3 Contra Block 6
+AFP 1543 M110/4 100 DN150 11 Contra Block 11
+AFP 1543 M90/6 100 DN150 9 Contra Block 10
+Grundfos type Curve no.
+SE1.80.100.30.4 3
+SE1.80.100.22.4 2
+SE1.80.100.15.4 1
+SE1.80.100.15.4 1
+SE1.100.100.55.4 5
+SE1.100.100.40.4 4
+SE1.100.100.75.4 6
+SE1.80.100.22.4 2
+Grundfos type Curve no.
+S1 074 S 2
+S1 224 H 5
+S1 174 H 4
+S1 134 H 3
+SE1.100.100.75.4 1
+SV 212 H 6
+Grundfos type Curve no.
+S1 124 BM 4
+SE1.100.150.55.4 2
+SE1.100.150.40.4 1
+SE1.100.150.40.4 1
+S1 134 M 5
+SE1.100.150.75.4 3
+
+------------------------------------------------------
+
+KSB type Impeller Free passage Discharge P2 (kW) Impeller type Curve no.
+KRT F 40-250-4 150 25 DN50 4 Vortex 4
+KRT F 40-250-4 160 25 DN50 4 Vortex 5
+KRT F 40-250-4 170 25 DN50 4 Vortex 6
+KRT F 40-250-4 180 25 DN50 4 Vortex 7
+KRT F 40-250-4 190 25 DN50 4 Vortex 8
+KSB type Impeller Free passage Discharge P2 (kW) Impeller type Curve no.
+KRT F 50-210-4 170 40 DN50 0.8 Vortex 7
+KRT F 50-210-4 180 40 DN50 1.3 Vortex 8
+KRT F 50-210-4 190 40 DN50 2.4 Vortex 9
+KRT F 50-210-4 200 40 DN50 2.4 Vortex 10
+KRT F 50-210-2 170 40 DN50 2.6 Vortex 11
+KRT F 50-210-2 180 40 DN50 3.95 Vortex 12
+KRT F 50-210-2 190 40 DN50 3.95 Vortex 13
+KRT F 50-210-2 200 40 DN50 3.95 Vortex 14
+KSB type Impeller Free passage Discharge P2 (kW) Impeller type Curve no.
+KRT F 65-210-4 140 65 DN65 0.8 Vortex 7
+KRT F 65-210-4 157 65 DN65 0.8 Vortex 8
+KRT F 65-210-4 175 65 DN65 1.3 Vortex 9
+KRT F 65-210-4 185 65 DN65 1.3 Vortex 10
+KRT F 65-210-4 190 65 DN65 2.4 Vortex 11
+KRT F 65-210-4 195 65 DN65 2.4 Vortex 12
+KRT F 65-210-2 115 65 DN65 2.1 Vortex 13
+KRT F 65-210-2 120 65 DN65 2.1 Vortex 14
+KRT F 65-210-2 130 65 DN65 2.6 Vortex 15
+KRT F 65-210-2 140 65 DN65 3.95 Vortex 16
+Grundfos type Curve no.
+EF30.50.06.2 1
+EF30.50.06.2 1
+EF30.50.09.2 2
+EF30.50.09.2 2
+EF30.50.11.2 3
+Grundfos type Curve no.
+SEV.65.65.09.2 1
+SEV.65.65.11.2 2
+SEV.65.65.11.2 2
+SEV.65.65.15.2 3
+SEV.65.80.30.2 4
+SEV.65.65.40.2 5
+SEV.65.65.40.2 5
+SEV.65.80.40.2 6
+Grundfos type Curve no.
+SEV.65.65.09.2 1
+SEV.65.65.11.2 2
+SEV.65.65.15.2 3
+SEV.65.65.22.2 4
+SEV.65.65.22.2 4
+SEV.65.65.22.2 4
+SEV.65.65.22.2 4
+SEV.65.65.22.2 4
+SEV.65.65.30.2 5
+SEV.65.65.40.2 6
+
+------------------------------------------------------
+
+
+KSB type Impeller Free passage Discharge P2 (kW) Impeller type Curve no.
+KRT F 80-210-4 158 80 DN80 0.8 Vortex 6
+KRT F 80-210-4 175 80 DN80 0.8 Vortex 7
+KRT F 80-210-4 185 80 DN80 1.3 Vortex 8
+KRT F 80-210-4 190 80 DN80 2.4 Vortex 9
+KRT F 80-210-4 207 80 DN80 2.4 Vortex 10
+KRT F 80-210-4 210 80 DN80 3.15 Vortex 11
+KSB type Impeller Free passage Discharge P2 (kW) Impeller type Curve no.
+KRT F 80-315-2 170 76 DN80 14.5 Vortex 8
+KRT F 80-315-2 190 76 DN80 19 Vortex 9
+KRT F 80-315-2 210 76 DN80 25 Vortex 10
+KRT F 100-250-4 200 100 DN100 4 Vortex 6
+KRT F 100-250-4 237 100 DN100 5.5 Vortex 7
+KSB type Impeller Free passage Discharge P2 (kW) Impeller type Curve no.
+KRT E 80-250-4 225 76 DN80 5.5 Single channel 5
+KRT E 80-250-4 240 76 DN80 7.5 Single channel 6
+KRT E 80-250-4 255 76 DN80 11.8 Single channel 7
+KRT E 80-250-4 270 76 DN80 11.8 Single channel 8
+Grundfos type Curve no.
+SEV.80.80.11.4 1
+SEV.80.80.11.4 1
+SEV.80.80.13.4 2
+SEV.80.80.15.4 3
+SEV.80.80.22.4 4
+SEV.80.80.40.4 5
+Grundfos type Curve no.
+SV 152 H 3
+SV 212 H 4
+SV 302 H 5
+SEV.100.100.40.4 1
+SEV.100.100.55.4 2
+Grundfos type Curve no.
+SE1.80.80.55.4 1
+SE1.80.100.75.4 2
+S1 124 BM 3
+S1 124 AH 4
+
+------------------------------------------------------
+
+KSB type Impeller Free passage Discharge P2 (kW) Impeller type Curve no.
+KRT E 100-250-4 202 90 DN100 4 Single channel 7
+KRT E 100-250-4 220 90 DN100 5.5 Single channel 9
+KRT E 100-250-4 245 90 DN100 7.5 Single channel 12
+KRT K 100-250-4 210 71 DN100 4 2-channel 8
+KRT K 100-250-4 220 71 DN100 5.5 2-channel 10
+KRT K 100-250-4 230 71 DN100 7.5 2-channel 11
+Grundfos type Curve no.
+SE1.100.100.40.4 1
+SE1.100.100.55.4 3
+SE1.100.100.75.4 5
+SE1.80.100.40.4 2
+SE1.80.100.55.4 4
+SE1.80.100.75.4 6
+Grundfos
+S pump type
+Free passage Discharge P2 (kW) Impeller type Curve no.
+SV 034 C 100 100 2.9 SuperVortex 5
+SV 044 C 100 100 4.2 SuperVortex 6
+SV 064 B 80x100 100 5.5 SuperVortex 7
+SV 074 B 80x100 100 7 SuperVortex 8
+Grundfos type Curve no. Adaptor
+SEV.80.80.11.4 1 96572290
+SEV.80.80.13.4 2 96572290
+SEV.80.80.15.4 3 96572290
+SEV.80.80.22.4 4 96572290
+SEV.80.80.40.4 5 96572290
+SEV.80.80.40.4 5 96572290
+Grundfos type Curve no. Adaptor
+SEV.100.100.30.4 1 96572291
+SEV.100.100.40.4 2 96572291
+SEV.100.100.55.4 3 96572291
+SEV.100.100.75.4 4 96572291
+Grundfos S pumps
+Grundfos
+S pump type
+Free passage Discharge P2 (kW) Impeller type Curve no.
+SV 014 BL 80 80 1,65 SuperVortex 6
+SV 014 B 80 80 1.65 SuperVortex 7
+SV 024 B 80 80 1.65 SuperVortex 8
+SV 024 BH 80 80 2.3 SuperVortex 9
+SV 034 CH 80 80 2.9 SuperVortex 10
+SV 044 CH 80 80 4.2 SuperVortex 11
+
+------------------------------------------------------
+
+Grundfos
+S pump type
+Free passage Discharge P2 (kW) Impeller type Curve no.
+SV 042 C 80 80 4.5 SuperVortex 5
+SV 072 BH 80 80 7.4 SuperVortex 6
+SV 092 BH 80 80 9.4 SuperVortex 7
+SV 122 BH 80 80 11.5 SuperVortex 8
+Grundfos
+S pump type
+Free passage Discharge P2 (kW) Impeller type Curve no.
+S1 044 C 100 100 4.2 Single channel 6
+S1 064 AM 100 100 5.5 Single channel 7
+S1 074 AM 100 100 7 Single channel 8
+S1 064 AH 80 100 5.5 Single channel 9
+S1 074 AH 80 100 7 Single channel 10
+S1 074 AS 80 100 7 Single channel
+Grundfos
+S pump type
+Free passage Discharge P2 (kW) Impeller type Curve no.
+S1 074 L 100 150 7 Single channel 9
+S1 054 CM 100 100 5.5 Single channel 6
+S1 074 CM 100 100 7.5 Single channel 8
+S1 054 H 80 100 5.5 Single channel 7
+S1 074 H 80 100 7.5 Single channel 10
+Grundfos type Curve no. Adaptor
+SEV.80.80.40.2 1 96255641
+SEV.80.80.75.2 2 96255641
+SEV.80.80.92.2 3 96255641
+SEV.80.80.110.2 4 96255641
+Grundfos type Curve no. Adaptor
+SE1.100.100.40.4 1 96572291
+SE1.100.100.40.4 1 96572291
+SE1.100.100.55.4 2 96572291
+SE1.80.100.55.4 3 96572291
+SE1.80.100.75.4 5 96572291
+SE1.80.80.75.4 4 96255641
+Grundfos type Curve no. Adaptor
+SE1.100.150.75.4 5 96572296
+SE1.100.100.55.4 1 96572291
+SE1.100.100.75.4 3 96572291
+SE1.80.100.55.4 2 96572291
+SE1.80.100.75.4 4 96572291
+
+
+------------------------------------------------------
+
+
+Grundfos AP type Free passage Discharge P2 (kW) Impeller type Curve no.
+AP30.50.07.1 30 2” 0.7 Open single-vane 4
+AP30.50.09.3 30 2” 0.9 Open single-vane 5
+AP30.50.11.1 30 2” 1.1 Open single-vane 6
+AP30.50.12.3 30 2” 1.2 Open single-vane 7
+Grundfos AP type Free passage Discharge P2 (kW) Impeller type Curve no.
+APG.50.06 - 2” 0.6 Grinder 6
+APG.50.09 - 2” 0.9 Grinder 7
+APG.50.14 - 2” 1.4 Grinder 8
+APG.50.19 - 2” 1.9 Grinder 9
+APG.50.31 - 2” 3.1 Grinder 10
+APG.50.48 - DN50 4.8 Grinder 11
+Grundfos AP type Free passage Discharge P2 (kW) Impeller type Curve no.
+AP51.65.07 50 21⁄2” 0.7 Single channel 9
+AP51.65.12 50 21⁄2” 1.2 Single channel 10
+AP51.65.17.3 50 21⁄2” 1.7 Single channel 11
+AP51.65.22.3 (Ex) 50 21⁄2” 2.2 Single channel 12
+AP65.65.09.1.V 65 DN65 0.9 Vortex 7
+AP65.65.12.1.V 65 DN65 1.2 Vortex 8
+Grundfos type Curve no. Adaptor
+SEG.40.09 1 96578891
+SEG.40.09 1 96578891
+SEG.40.15 2 96578891
+SEG.40.26 3 96578891
+SEG.40.31 4 96578891
+SEG.40.40 5 N/A
+Grundfos type Curve no. Adaptor
+EF30.50.06 1 N/A
+EF30.50.09 2 N/A
+EF30.50.11 3 N/A
+EF30.50.11 3 N/A
+Grundfos type Curve no. Adaptor
+SE1.50.65.06 1 N/A
+SE1.50.65.11 4 N/A
+SE1.50.65.15 5 N/A
+SE1.50.65.22 6 N/A
+SEV.65.65.11 2 N/A
+SEV.65.65.15 3 N/A
+
+
+------------------------------------------------------
+
+
+Grundfos AP type Free passage Discharge P2 (kW) Impeller type Curve no.
+AP65.100.24.V 65 DN100 2.4 Vortex 5
+AP65.100.32.V 65 DN100 3.2 Vortex 6
+AP65.100.45.V 65 DN100 4.5 Vortex 7
+AP65.100.61.V 65 DN100 6.1 Vortex 8
+AP65.100.130.V 65 DN100 13 Vortex 9
+Grundfos AP type Free passage Discharge P2 (kW) Impeller type Curve no.
+AP70.80.09.3 (Ex) 70 DN80 0.9 Single channel 5
+AP70.80.13.3 (Ex) 70 DN80 1.3 Single channel 6
+AP70.80.19.3 (Ex) 70 DN80 1.9 Single channel 7
+AP70.80.24.3 (Ex) 70 DN80 2.4 Single channel 8
+Grundfos AP type Free passage Discharge P2 (kW) Impeller type Curve no.
+AP80.150.250 (Ex) 80 DN150 25 2-channel 6
+AP80.150.300 (Ex) 80 DN150 30 2-channel 7
+AP80.150.330 (Ex) 80 DN150 33 2-channel 8
+AP80.150.350 (Ex) 80 DN150 35 2-channel 9
+AP80.150.370 (Ex) 80 DN150 37 2-channel 10
+AP80.150.450 (Ex) 80 DN150 45 2-channel 11
+Grundfos type Curve no. Adaptor
+SEV.100.100.30 1 96572281
+SEV.100.100.40 2 96572281
+SEV.100.100.55 3 96572281
+SEV.100.100.75 4 96572281
+SEV.100.100.75 4 96572281
+Grundfos type Curve no. Adaptor
+SEV.80.80.11 1 96572268
+SEV.80.80.15 2 96572268
+SE1.80.80.15 3 96572268
+SE1.80.80.22 4 96572268
+Grundfos type Curve no. Adaptor
+S1 224 M 1 96572283
+S1 264 M 2 96572283
+S1 304 M 3 96572283
+S1 404 M 4 96572283
+S1 504 M 5 96572283
+S1 504 M 5 96572283
+
+
+-------------
+
+
+Grundfos AP type Free passage Discharge P2 (kW) Impeller type Curve no.
+AP80.80.10.V (Ex) 80 DN80 1 Vortex 6
+AP80.80.13.V (Ex) 80 DN80 1.3 Vortex 7
+AP80.80.20.V (Ex) 80 DN80 2 Vortex 8
+AP80.80.26.V (Ex) 80 DN80 2.6 Vortex 9
+AP80.80.48.V (Ex) 80 DN80 4.8 Vortex 10
+Grundfos AP type Free passage Discharge P2 (kW) Impeller type Curve no.
+AP80.80.65.V (Ex) 80 DN80 6.5 Vortex 7
+AP80.80.92.V (Ex) 80 DN80 9.2 Vortex 8
+AP80.80.107.V (Ex) 80 DN80 10.7 Vortex 9
+AP80.80.160.V (Ex) 80 DN80 16 Vortex 10
+AP80.80.190.V (Ex) 80 DN80 19 Vortex 11
+AP80.80.250.V (Ex) 80 DN80 25 Vortex 12
+Grundfos AP type Free passage Discharge P2 (kW) Impeller type Curve no.
+AP100.100.24 (Ex) 100 DN100 2.4 Single channel 9
+AP100.100.32 (Ex) 100 DN100 3.2 Single channel 10
+AP100.100.45 (Ex) 100 DN100 4.5 Single channel 11
+AP100.100.54 (Ex) 100 DN100 5.4 Single channel 12
+AP100.100.61 (Ex) 100 DN100 6.1 Single channel 13
+AP100.100.80 (Ex) 100 DN100 8 Single channel 14
+AP100.100.115 (Ex) 100 DN100 11.5 Single channel 15
+AP100.100.130 (Ex) 100 DN100 13 Single channel 16
+AP100.100.135 (Ex) 100 DN100 13.5 Single channel 17
+Grundfos type Curve no. Adaptor
+SEV.80.80.10 1 96572268
+SEV.80.80.13 2 96572268
+SEV.80.80.15 3 96572268
+SEV.80.80.22 4 96572268
+SEV.80.80.40 5 96572268
+Grundfos type Curve no. Adaptor
+SEV.80.80.60 1 96572268
+SEV.80.80.75 2 96572268
+SEV.80.80.92 3 96572268
+SEV.80.80.110 4 96572268
+SV 212 H 5 96572268
+SV 302 H 6 96572268
+Grundfos type Curve no. Adaptor
+S1 034 DH 1 *
+SE1.100.100.40 2 96572281
+SE1.100.100.40 2 96572281
+SE1.100.100.55 3 96572281
+SE1.80.100.55 4 96572281
+SE1.100..100.75 5 96572281
+S1 124 AH 6 96572281
+S1 134 H 7 96572281
+S1 174 H 8 96572281
+
+--------------------------------------------------------
+
+Pump to be replaced::
+
+Grundfos AP type Free passage Discharge P2 (kW) Impeller type Curve no.
+AP100.150.80 (Ex) 100 DN150 8 Single channel 9
+AP100.150.115 (Ex) 100 DN150 11.5 Single channel 10
+AP100.150.130 (Ex) 100 DN150 13 Single channel 11
+AP100.150.170 (Ex) 100 DN150 17 Single channel 12
+AP100.150.220 (Ex) 100 DN150 22 Single channel 13
+AP100.150.260 (Ex) 100 DN150 26 Single channel 14
+AP100.150.300 (Ex) 100 DN150 30 Single channel 15
+AP100.150.330 (Ex) 100 DN150 33 Single channel 16
+Grundfos AP type Free passage Discharge P2 (kW) Impeller type Curve no.
+AP100.200.170 (Ex) 100 DN200 17 2-channel 5
+AP100.200.200 (Ex) 100 DN200 20 2-channel 6
+AP100.200.220 (Ex) 100 DN200 22 2-channel 7
+AP100.200.250 (Ex) 100 DN200 25 2-channel 8
+Grundfos AP type Free passage Discharge P2 (kW) Impeller type Curve no.
+AP130.250.170 (Ex) 130 DN250 17 2-channel 5
+AP130.250.200 (Ex) 130 DN250 20 2-channel 6
+AP130.250.220 (Ex) 130 DN250 22 2-channel 7
+AP130.250.250 (Ex) 130 DN250 25 2-channel 8
+AP130.250.300 (Ex) 130 DN250 30 2-channel 9
+AP130.250.350 (Ex) 130 DN250 35 2-channel 10
+
+Grundfos Recommends::
+
+Grundfos type Curve no. Adaptor
+S1 074 L 1 96572283
+S1 124 AL 2 96572283
+S1 134 M 3 96572283
+S1 174 M 4 96572283
+S1 224 M 5 96572283
+S1 264 M 6 96572283
+S1 304 M 7 96572283
+S1 404 M 8 96572283
+Grundfos type Curve no. Adaptor
+S1 134 BL 1 96581421
+S1 174 BL 2 96581421
+S2 224 AL 3 96581421
+S2 264 AL 4 96581421
+Grundfos type Curve no. Adaptor
+S2 156 E 1 96581423
+S2 156 E 1 96581423
+S2 226 E 3 96581423
+S2 226 E 3 96581423
+S2 304 E 2 96581423
+S2 404 E 4 96581423
