@@ -1,0 +1,19 @@
+Having done a poor job of keeping my repo organized I am going through each of my files and outlining
+what key features it contains so I dont have to keep running them.
+
+
+- c:\Users\kinse\Desktop\DXP_app\Feature_ComboBox.py   - Allows user to pick equipment type and all the matching suppliers are listed
+
+
+FUNCTIONALITY - Trello
+- c:\Users\kinse\Desktop\DXP_app\trelloclone_main.py - Trello clone type UX, for TO DO or Project management
+
+
+FUNCTIONALITY - Calendar/Date
+- c:\Users\kinse\Desktop\DXP_app\calendar_entries.py - Very nice calendar and sql database set up- Can be a MAIN screen
+
+
+FUNCTIONALITY - Main Screen Outline
+- c:\Users\kinse\Desktop\DXP_app\Feature_ContextMenu.py - Has panned windows and notebook tabs --- good layout
+
+FUNCTIONALITY - 
